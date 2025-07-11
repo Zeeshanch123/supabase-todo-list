@@ -1,38 +1,190 @@
-.App {
+/* Main container and layout */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.avatar {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.darkToggle {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 6px 12px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signOut {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 8px 16px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+}
+
+.todoItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e7f1ff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Auth styles */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.auth-button {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.auth-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 🌗 Dark Mode Styles */
+.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.dark .input,
+.dark .auth-input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark .todoItem {
+  background-color: #2a2a2a;
+}
+
+.dark .button,
+.dark .auth-button {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark .button:hover,
+.dark .auth-button:hover {
+  background-color: #666;
+}
+
+.dark .signOut {
+  background-color: #aa4444;
+}
+
+.darkToggle {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 6px 12px;
 }
